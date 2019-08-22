@@ -20,10 +20,10 @@ def nyc_pigeon_organizer(data)
         if pigeon_data[name]            
           if pigeon_data[name][:gender]  
           else                          # pigeon will get an name
-            pigeon_data[name][:gender] = [gender]     
+            pigeon_data[name][:gender] = [gender.to_s]     
           end
         else                            # no pigeon with a name in the hash 
-          pigeon_data[name][:gender] = [gender]
+          pigeon_data[name][:gender] = [gender.to_s]
         end
       end 
     end
