@@ -31,12 +31,12 @@ def nyc_pigeon_organizer(data)
     lives.each do |place, names|
       names.each do |name|
         if pigeon_data[name]            
-          if pigeon_data[name][:place]  
+          if pigeon_data[name][:lives]  
           else                          # pigeon will get an name
-            pigeon_data[name][:place] = [place]     
+            pigeon_data[name][:lives] = [place]     
           end
         else                            # no pigeon with a name in the hash 
-          pigeon_data[name][:place] = [place]
+          pigeon_data[name][:lives] = [place]
         end
       end 
     end
